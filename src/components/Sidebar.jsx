@@ -9,6 +9,9 @@ const Sidebar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   const [showModal, setShowModal] = useState(false);
  
+  const closeSidebar = () => {
+    setShowSidebar(false)
+  }
   return (
     <>
       <header>
@@ -28,7 +31,7 @@ const Sidebar = () => {
             {navigation.map((nav, index) => {
               const { text, link } = nav;
               return (
-                <Link to={link} key={index} >
+                <Link to={link} key={index} onClick={closeSidebar} >
                   {text}
                 </Link>
               );

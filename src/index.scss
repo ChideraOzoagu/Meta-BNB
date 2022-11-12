@@ -191,14 +191,15 @@ nav {
   border-radius: 8px;
   display: inline-block;
   padding: 0.8rem;
+  max-width: 300px;
 
   .img-container {
     position: relative;
-    display: inline-block;
-    max-width: 300px;
+    
 
     img {
       width: 100%;
+      
     }
   }
   .favorite-icon {
@@ -329,15 +330,11 @@ footer {
 
 // MARKETPLACE PAGE
 
-.marketplace {
-  padding: 0 2rem;
-}
+
 .filter {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-block: 2rem;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  padding: 2rem;
   gap: 1rem;
 
   h3 {
